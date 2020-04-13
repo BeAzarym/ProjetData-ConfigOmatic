@@ -1,7 +1,7 @@
 insert into tbBoitier
 (BoiteName, BoitierPrix )
 values
-('antec ', nx100 35),
+('antec nx100', 35),
 ('vampiric', 64.95),
 ('corsair crystal 680x', 249.95),
 ('zalman z9 neo blanc', 84.95),
@@ -15,8 +15,8 @@ values
 ('intel core i9 9900k', 599.95),
 ('intel core i7 9700k', 459.95),
 ('intel core i5 9600k', 279.95),
-('intelcore i3 9100f 95.95),
-('amd ryzen 9 3900X wraith prism led rgb ',499.94),
+('intelcore i3 9100f', 95.95),
+('amd ryzen 9 3900X wraith prism led rgb ' , 499.94),
 ('amd ryzen 7 2700X wraith prism edition(3.7 ghz) ',209.95),
 ('amd ryzen 5 2600x wraith spire', 159.95),
 ('amd ryzen 3 2200g wraith stealth',59.95);
@@ -47,6 +47,5 @@ values
 ('msi rtx2080 ti rog matrix super aero', 1899.95),
 ('msi gtx1661 ti', 389.95),
 ('asus radeon r5 230',  42.95),
-('gigabyte gtx 1050 ti ',194.95),
-('sapphire pulse rx5700 8g xt',  499.94);
-
+('gigabyte gtx 1050 ti ' ,194.95),
+('sapphire pulse rx5700 8g xt ' ,  499.94 );
