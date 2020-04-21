@@ -2,7 +2,7 @@
 Notre groupe : Chabeau Calvin, Basnet Devashish, Borca Mark, Salhi Adel
 
 Notre projet est de réaliser un site répertoriant une série de composants afin de réaliser des
-configuration personnalisé. Les prix des différents composants seront également ajouté afin de 
+configurations personnalisées. Les prix des différents composants seront également ajouté afin de 
 pouvoir visualiser le prix total d'une configuration.
 
 Nous avons donc besoin d'une base de données composé de plusieurs tables, celles-ci serviront
