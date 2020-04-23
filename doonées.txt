@@ -1,5 +1,5 @@
 insert into tbBoitier
-(BoiteName, BoitierPrix )
+(BoitieName, BoitierPrix )
 values
 ('antec nx100', 35),
 ('vampiric', 64.95),
@@ -40,8 +40,9 @@ values
 ('toshiba n300 14To', 564.95),
 ('western digital ultrastar dc HC530 14 To', 774.95);
 
-insert into tbCarteGraphic
-(CarteGraphicName, CarteGraphicPrix )
+
+insert into tbCarteGraphique
+(CarteGraphiqueName, CarteGraphiquePrix )
 values
 ('msi rtx2080 super aero', 869.95),
 ('msi rtx2080 ti rog matrix super aero', 1899.95),
@@ -49,3 +50,4 @@ values
 ('asus radeon r5 230',  42.95),
 ('gigabyte gtx 1050 ti ' ,194.95),
 ('sapphire pulse rx5700 8g xt ' ,  499.94 );
+
