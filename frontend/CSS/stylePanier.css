@@ -1,0 +1,128 @@
+body {
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+header {
+  background-color: rgb(245, 245, 245);
+  width: 1120px;
+  height: 120px;
+  margin: 0 auto;
+  display: flex;
+}
+#utilisateur {
+  width: 220px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 0 0;
+}
+#utilisateur p {
+  margin: 0 0 0 10px;
+  line-height: 50px;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#utilisateur img {
+  width: 30px;
+  height: 30px;
+  margin: 5px 10px;
+}
+
+#panier {
+  background-color: rgb(157, 218, 238);
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  border: rgb(34, 163, 206) 2px solid;
+  margin: 40px 0 0 780px;
+  display: flex;
+}
+#panier img {
+  width: 38px;
+  height: 38px;
+  margin: 1px 0 0 12px;
+}
+#panier p {
+  background-color: grey;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin: 10px 0 0 20px;
+}
+.config {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+main {
+  background-color: whitesmoke;
+  width: 1120px;
+  min-height: 800px;
+  margin: 0 auto;
+  display: flex;
+}
+article {
+  background-color: white;
+  width: calc(70% - 5px);
+  min-height: 800px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+}
+#produitsChoisi {
+  background-color: tomato;
+  width: calc(100% - 12px);
+  height: 200px;
+  margin: 0 6px;
+}
+.title {
+  background-color: white;
+  width: 100%;
+  height: 60px;
+  margin: 4px 0;
+  vertical-align: middle;
+  text-align: center;
+}
+aside {
+  background-color: white;
+  width: 30%;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.recapContainer {
+  background-color: rgb(236, 236, 236);
+  width: calc(100% - 16px);
+  min-height: 196px;
+  border: rgb(189, 188, 188) 2px solid;
+  margin: 0 6px 20px;
+  display: flex;
+  flex-direction: column;
+}
+#composantRecap {
+  background-color: green;
+  width: 98%;
+  height: 20px;
+  margin: 1% 1%;
+}
+.recapContainerMain {
+  width: 100%;
+  min-height: 136px;
+  margin-bottom: 10px;
+}
+.recapContainerBtn {
+  width: 100%;
+  height: 50px;
+}
+.btnRecap {
+  background-color: rgb(230, 150, 76);
+  width: 180px;
+  height: 40px;
+  color: white;
+  border: none;
+  margin: 6px 0 6px 70px;
+}

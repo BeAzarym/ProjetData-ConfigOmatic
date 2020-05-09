@@ -1,0 +1,95 @@
+body {
+  background-color: rgb(245, 245, 245);
+}
+main {
+  background-color: rgb(245, 245, 245);
+  width: 800px;
+  height: 500px;
+  margin: 10% auto 0 auto;
+  border-radius: 1.5%;
+  display: flex;
+  flex-direction: row;
+}
+aside {
+  background-color: rgb(6, 18, 31);
+  width: 400px;
+  height: 100%;
+  border-radius: 1.5%;
+}
+aside img {
+  width: 350px;
+  height: 350px;
+  margin: 80px 0 0 25px;
+}
+#loginPage {
+  background-color: white;
+  width: 400px;
+  height: 100%;
+  border-radius: 1.5%;
+  display: flex;
+  flex-direction: column;
+}
+#signinPage {
+  background-color: white;
+  width: 400px;
+  height: 100%;
+  border-radius: 1.5%;
+  display: none;
+  flex-direction: column;
+}
+form {
+  width: 300px;
+  height: 300px;
+  margin: 100px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+p {
+  margin: 0 auto 50px;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.inputContainer {
+  width: 300px;
+  height: 40px;
+}
+input {
+  width: 250px;
+  padding: 10px;
+  outline: none;
+}
+img {
+  width: 35px;
+  height: 35px;
+}
+input,
+img {
+  vertical-align: middle; /* or whatever else value */
+  box-sizing: border-box;
+}
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  margin: 20px 0;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+.switchLogIN_OUT {
+  margin: 50px auto;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.switchLogIN_OUT:hover {
+  color: dodgerblue;
+  transition: 0.5s;
+}

@@ -1,0 +1,221 @@
+body {
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+header {
+    background-color: rgb(245, 245, 245);
+    width: 1120px;
+    height: 120px;
+}
+.config {
+    background-color: pink;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+main {
+    background-color: white;
+    width: 1100px;
+    min-height: 600px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    height: 65px;
+}
+header,
+main,
+footer {
+    margin: 0 auto;
+}
+/** LEFT CONTAINER*/
+.intMainLeftContainer {
+    background-color: white;
+    width: 65%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    margin: 0.5%;
+    margin: 4px 0;
+    vertical-align: middle;
+    text-align: center;
+}
+.composants {
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    height: 90px;
+    text-align: left;
+
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    margin: 12px 0 0 0;
+}
+.composants img {
+    width: 56px;
+    height: 56px;
+    margin: 20px 10px 0 20px;
+}
+.composants h2 {
+    width: 540px;
+    line-height: 52px;
+}
+/*!! Composant choisi on/of*/
+.composantChoisi {
+    background-color: rgb(134, 134, 134);
+    height: 100px;
+    width: 100%;
+    display: none;
+}
+/*!! Right Container*/
+.intMainRightContainer {
+    background-color: white;
+    width: 35%;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+.recapContainer {
+    background-color: rgb(157, 218, 238);
+    width: calc(100% - 14px);
+    min-height: 220px;
+    border: rgb(34, 163, 206) 2px solid;
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+/*!!turn on/of by js script*/
+/*TODO add functoin that cloces popup ON/OF block by pressing on blockOnOf or exit button on OnOfHeader*/
+#blockOnOf {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px;
+    display: block;
+    position: fixed;
+}
+#intBlockOnOf {
+    background-color: yellow;
+    width: 930px;
+    height: 600px;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+}
+.OnOfHeader {
+    background-color: white;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+.OnOfHeader img {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    padding: 5px;
+}
+.OnOfHeader h2 {
+    margin: auto auto;
+}
+.OnOfRest {
+    background-color: white;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+.intOnOfRestLeft {
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/*!!add stuff left int header*/
+.restLeftHeader {
+    background-color: rgb(134, 134, 134);
+    width: calc(100% - 10px);
+    height: 40px;
+    margin: 0 0 0 10px;
+    display: flex;
+    flex-direction: row;
+}
+.restLeftHeader p {
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 0px;
+}
+.productsHeader {
+    background-color: rgb(134, 134, 134);
+    width: 450px;
+    height: 40px;
+    padding-left: 10px;
+    border-right: 1px solid white;
+    border-right: 0;
+}
+.priceHeader {
+    background-color: rgb(134, 134, 134);
+    width: calc(100% - 450px);
+    height: 40px;
+    padding-left: 10px;
+    border-left: 1px solid white;
+}
+.restLeftMain {
+    background-color: rgb(236, 236, 236);
+    width: calc(100% - 10px);
+    height: calc(93% - 10px);
+    margin: 0 0 10px 10px;
+    overflow-y: scroll;
+}
+#productContainer {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: white 1px solid;
+}
+.products {
+    background-color: lightgrey;
+    width: 446px;
+    height: 100%;
+    border-right: 1px white solid;
+}
+.price {
+    background-color: lightgrey;
+    width: calc(100% - 446px);
+    height: 100%;
+}
+.intOnOfRestRight {
+    background-color: white;
+    width: 30%;
+    height: 100%;
+}
+
+.restLeftMain::-webkit-scrollbar {
+    width: 0px;
+}
+
+/*TODO
+  *SCRIPT THAT TAKES PRODUCT TYPE(EX: PROCESSEUR) FROM DATABASE AND WHEN productContainer
+  -IS CLICKED SENDS THE DATA IN THE RIGHT composantChoisi DIV
+  *LINK TO DATABASE
+  *WORK ON PROPHILE (NAME CLIENT)
+
+  +ADD A BASKET CHECK
+  +ADD A SAVE BUTTON
+*/
+/*TODO change h2 titles in 'composants' with names from sql database*/
