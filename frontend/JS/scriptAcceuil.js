@@ -34,7 +34,7 @@ function verifePseudo(){
 
   console.log(reponse)
     if( reponse == 1 ){
-      alert("Ce pseudo existe deja , vous etes bien  : " + pseudo + " Si non trouvé un autre pseudo")
+      alert("Ce pseudo existe deja , vous etes bien  : " + pseudo + " , Si non trouvé un autre pseudo")
 
     }
 
