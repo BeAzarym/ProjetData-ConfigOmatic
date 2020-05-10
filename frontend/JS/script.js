@@ -89,7 +89,7 @@ function chargementProc() {
             '<p>' + i.ProcesseurName + '</p > ' +
             '</div>' +
             '<div class="descriptionProd">' +
-            '<p> ' + i.socket + '</p>' +
+            '<p> ' +"Socket: "+ i.socket + '</p>' +
             '</div>' +
             '</div>' +
             '<img src="" alt="" /*TODO add ploto name drom database OPTIONAL*/>' +
@@ -129,7 +129,7 @@ function chargementCM() {
             '<p>' + i.CarteMereName + '</p > ' +
             '</div>' +
             '<div class="descriptionProd">' +
-            '<p> ' + i.socket + '</p>' +
+            '<p> ' + "Socket: " + i.socket + '</p>' +
             '</div>' +
             '</div>' +
             '<img src="" alt="" /*TODO add ploto name drom database OPTIONAL*/>' +
@@ -169,7 +169,7 @@ function chargementMV() {
             '<p>' + i.RamName + '</p > ' +
             '</div>' +
             '<div class="descriptionProd">' +
-            '<p> ' + i.capacite + '</p>' +
+            '<p> ' +"Capacité: " + i.capacite + "Go" + '</p>' +
             '</div>' +
             '</div>' +
             '<img src="" alt="" /*TODO add ploto name drom database OPTIONAL*/>' +
@@ -209,7 +209,7 @@ function chargementCG() {
             '<p>' + i.CarteGraphiqueName + '</p > ' +
             '</div>' +
             '<div class="descriptionProd">' +
-            '<p> ' + i.memoire + '</p>' +
+            '<p> ' +"Capacité: "+  i.memoire +"Go" + '</p>' +
             '</div>' +
             '</div>' +
             '<img src="" alt="" /*TODO add ploto name drom database OPTIONAL*/>' +
@@ -248,7 +248,7 @@ function chargementDD() {
             '<p>' + i.DisqueDurName + '</p > ' +
             '</div>' +
             '<div class="descriptionProd">' +
-            '<p> ' + i.capacite + '</p>' +
+            '<p> ' + "Capacité: " + i.capacite +"To" + '</p>' +
             '</div>' +
             '</div>' +
             '<img src="" alt="" /*TODO add ploto name drom database OPTIONAL*/>' +
@@ -291,7 +291,7 @@ function chargementBoitier() {
             '<p>' + i.BoitierName + '</p > ' +
             '</div>' +
             '<div class="descriptionProd">' +
-            '<p> ' + 'Langeur:' + i.langeur + 'hauteur:' + i.hauteur + '</p>' +
+            '<p> ' + 'Largeur: ' + i.largeur + "</br>" +  'Hauteur: ' + i.hauteur + '</p>' +
             '</div>' +
             '</div>' +
             '<img src="" alt="" /TODO add ploto name drom database OPTIONAL*/>' +
