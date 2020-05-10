@@ -1,4 +1,4 @@
-"use strict"; //DEVASHISH BASNET
+"use strict"; 
 
 //body onload chargement
 // récup des données des composants et les affiches ds la page
