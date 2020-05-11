@@ -10,7 +10,7 @@ function enregistrerDonnéeConfiguration () {
 
 function enregistrerConfiguration () {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET','?' + "enregistre_config?Processeur="+Processeur+"&Boitier="+Boitier+"&Ram="+Ram+"&CarteGraphique="CarteGraphique+"&CarteMere="+CarteMere+"&DisqueDur="+DisqueDur+"&pseudo="+pseudo,true);
+    xhr.open('GET','enregistre_config' + "?Processeur="+Processeur+"&Boitier="+Boitier+"&Ram="+Ram+"&CarteGraphique="+CarteGraphique+"&CarteMere="+CarteMere+"&DisqueDur="+DisqueDur+"&pseudo="+pseudo,true);
     xhr.onload =enregistrerDonnéeConfiguration();
     xhr.send();
 
