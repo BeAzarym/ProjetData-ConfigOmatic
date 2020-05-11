@@ -11,5 +11,7 @@ simplifié de ce que propose le Configomatic de TopAchat.
 Pour cele nous avons donc choisis de proposer 7 types de composant pour la réalisation des configs.
 Chaque type de composant proposera jusqu'a 8 choix différents (différentes marques/prix).
 
-Le site permettra de rentrer son username, et de composé sa config via une liste déroulante pour chaque composants, 
-il suffira de sauvegarder tout ça dans un tableau afin de les afficher dans une rubrique du site. 
+Le site permettra de rentrer un 'pseudo de config' afin d'attribuer un nom à votre config pour pouvoir la récuperer sur le site,
+il sera possible de composé sa config via une liste déroulante pour chaque composants qui seront affichés dans un récapitulatif associé à 
+un bouton qui permettra de sauvegarder sa config dans la base de données. 
+Une config est donc récuperable via son pseudo, et sera affiché en bas de page.
