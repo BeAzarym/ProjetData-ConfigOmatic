@@ -75,14 +75,25 @@ function appelProc() {
     return false;
 }
 
+function onClickChangeVisibility(id) {
+    let getId = document.getElementById(id);
+
+    if (getId.style.display === "none") {
+        getId.style.display = "flex";
+    }
+    else{
+        getId.style.display = "none";
+    }
+}
+
 function chargementProc() {
     let reponse = this.response;
 
     let procId = "";
     for (let i of reponse) {
-        let giveId = "processeurId" + i.ProcesseurId;
+        
 
-        procId += '<div class="containerProduits" id="' + giveId + '" onclick="choisirComposant()">' +  /* onClock ne functione pas */
+        procId += '<div class="containerProduits" onclick="displayIdCompProc(' + i.ProcesseurId +')">' +  /* onClock ne functione pas */
             '<div class="intContainerProduits">' +
             '<div class="nomDescriptionProd">' +
             '<div class="monProd">' +
@@ -102,7 +113,20 @@ function chargementProc() {
     document.getElementById("processeur").insertAdjacentHTML('beforeend', procId);
 
 }
+function displayIdCompProc(x) {
+    console.log(x);
+    addInRecap(x, "Id du processeur :");
+    let getInput = document.getElementsByName("inputProcesseur")[0];
+    getInput.value = "";
+    getInput.value = x;
+    console.log(getInput.value);
+}
 
+function addInRecap() {
+    let inputWith = '<div id="composantRecap">'+arguments[1] + " " + arguments[0] +'</div>';
+    
+    document.getElementById("contRecap").insertAdjacentHTML('beforeend', inputWith);
+}
 /***************************************************************************************************************appel carte mere */
 
 function appelCM() {
@@ -118,11 +142,11 @@ function appelCM() {
 function chargementCM() {
     let reponse = this.response;
 
-    let procId = "";
+    let cmId = "";
     for (let i of reponse) {
-        let giveId = "carteMereId" + i.CarteMereId;
+        
 
-        procId += '<div class="containerProduits" id="' + giveId + '" onclick="choisirComposant()">' +  /* onClock ne functione pas */
+        cmId += '<div class="containerProduits" onclick="displayIdCompCM(' + i.CarteMereId +')">' +
             '<div class="intContainerProduits">' +
             '<div class="nomDescriptionProd">' +
             '<div class="monProd">' +
@@ -139,10 +163,17 @@ function chargementCM() {
             '</div>' +
             '</div>';
     };
-    document.getElementById("carteMere").insertAdjacentHTML('beforeend', procId);
+    document.getElementById("carteMere").insertAdjacentHTML('beforeend', cmId);
 
 }
-
+function displayIdCompCM(y) {
+    console.log(y);
+    addInRecap(y, "Id du carte mere :");
+    let getInput = document.getElementsByName("inputCM")[0];
+    getInput.value = "";
+    getInput.value = y;
+    console.log(getInput.value);
+}
 /********************************************************************************************************************appel memoire vive */
 
 function appelMV() {
@@ -158,11 +189,11 @@ function appelMV() {
 function chargementMV() {
     let reponse = this.response;
 
-    let procId = "";
+    let mvId = "";
     for (let i of reponse) {
         let giveId = "ramId" + i.RamId;
 
-        procId += '<div class="containerProduits" id="' + giveId + '" onclick="">' +  /* onClock ne functione pas */
+        mvId += '<div class="containerProduits" onclick="displayIdCompMV(' + i.RamId +')">' +  /* onClock ne functione pas */
             '<div class="intContainerProduits">' +
             '<div class="nomDescriptionProd">' +
             '<div class="monProd">' +
@@ -179,10 +210,17 @@ function chargementMV() {
             '</div>' +
             '</div>';
     };
-    document.getElementById("memoireVive").insertAdjacentHTML('beforeend', procId);
+    document.getElementById("memoireVive").insertAdjacentHTML('beforeend', mvId);
 
 }
-
+function displayIdCompMV(z) {
+    console.log(z);
+    addInRecap(z, "Id du ram :");
+    let getInput = document.getElementsByName("inputMV")[0];
+    getInput.value = "";
+    getInput.value = z;
+    console.log(getInput.value);
+}
 /*******************************************************************************************************appel carte graphique */
 
 function appelCG() {
@@ -198,11 +236,11 @@ function appelCG() {
 function chargementCG() {
     let reponse = this.response;
 
-    let procId = "";
+    let cgId = "";
     for (let i of reponse) {
-        let giveId = "carteGraphiqueId" + i.CarteGraphiqueId;
+        
 
-        procId += '<div class="containerProduits" id="' + giveId + '" onclick="choisirComposant()">' +  /* onClock ne functione pas */
+        cgId += '<div class="containerProduits" " onclick="displayIdCompCG(' + i.CarteGraphiqueId +')">' +  
             '<div class="intContainerProduits">' +
             '<div class="nomDescriptionProd">' +
             '<div class="monProd">' +
@@ -219,8 +257,16 @@ function chargementCG() {
             '</div>' +
             '</div>';
     };
-    document.getElementById("carteGraphique").insertAdjacentHTML('beforeend', procId);
+    document.getElementById("carteGraphique").insertAdjacentHTML('beforeend', cgId);
 
+}
+function displayIdCompCG(z) {
+    console.log(z);
+    addInRecap(z, "Id du carte graphique :");
+    let getInput = document.getElementsByName("inputCG")[0];
+    getInput.value = "";
+    getInput.value = z;
+    console.log(getInput.value);
 }
 /*****************************************************************************************************************appel disque dur */
 
@@ -237,11 +283,11 @@ function appelDD() {
 function chargementDD() {
     let reponse = this.response;
 
-    let procId = "";
+    let ddId = "";
     for (let i of reponse) {
-        let giveId = "disqueDurId" + i.DisqueDurId;
+        
 
-        procId += '<div class="containerProduits" id="' + giveId + '" onclick="">' +  /* onClick ne functione pas */
+        ddId += '<div class="containerProduits" onclick="displayIdCompDD(' + i.DisqueDurId +')">' +  
             '<div class="intContainerProduits">' +
             '<div class="nomDescriptionProd">' +
             '<div class="monProd">' +
@@ -258,11 +304,18 @@ function chargementDD() {
             '</div>' +
             '</div>';
     };
-    document.getElementById("disqueDur").insertAdjacentHTML('beforeend', procId);
+    document.getElementById("disqueDur").insertAdjacentHTML('beforeend', ddId);
 
 }
 
-
+function displayIdCompDD(z) {
+    console.log(z);
+    addInRecap(z, "Id du disque dur :");
+    let getInput = document.getElementsByName("inputDD")[0];
+    getInput.value = "";
+    getInput.value = z;
+    console.log(getInput.value);
+}
 /***************************************************************************************************************appel boitier */
 
 function appelBoitier() {
@@ -280,11 +333,11 @@ function chargementBoitier() {
 
     let reponse = this.response;
 
-    let procId = "";
+    let boitierId = "";
     for (let i of reponse){
-        let giveId = "boitierId" + i.BoitierId;
+        
 
-        procId += '<div class="containerProduits" id="' + giveId + '" onclick="choisirComposant()">' +  /* onClock ne functione pas */
+        boitierId += '<div class="containerProduits" onclick="displayIdCompBoitier(' + i.BoitierId +')">' +  
             '<div class="intContainerProduits">' +
             '<div class="nomDescriptionProd">' +
             '<div class="monProd">' +
@@ -301,5 +354,13 @@ function chargementBoitier() {
         '</div>' +
         '</div>';
     };
-    document.getElementById("boitier").insertAdjacentHTML('beforeend', procId);
+    document.getElementById("boitier").insertAdjacentHTML('beforeend', boitierId);
+}
+function displayIdCompBoitier(z) {
+    console.log(z);
+    addInRecap(z, "Id du boitier :");
+    let getInput = document.getElementsByName("inputBoitier")[0];
+    getInput.value = "";
+    getInput.value = z;
+    console.log(getInput.value);
 }
