@@ -35,16 +35,13 @@
       </div>
 
       <div class="composants">
-        <input type="hidden">
+        
         <img src="IMG/processeur.svg" />
         <h2>PROCESSEUR</h2>
-        <img class="imgRightComp" src="IMG/plus.svg"
-          onclick="document.getElementById('processeur').style.display = 'flex'" />
+        <div id="imgRightComp" onclick="onClickChangeVisibility('processeur')"></div>
       </div>
 
       <div class="composantChoisi" id="processeur">
-
-
         <div class="composantChoisiTitle">
           <div class="prodDescription">
             <h3>Description</h3>
@@ -53,8 +50,9 @@
             <h3>Prix</h3>
           </div>
         </div>
-        <div class="space"><input type="hidden" name="inputProcesseur" value="1"></div>
+        <div class="space"><input type="hidden" name="inputProcesseur" value=""></div>
 
+        
 
       </div>
 
@@ -62,8 +60,7 @@
       <div class="composants">
         <img src="IMG/carteMere.svg" alt="" />
         <h2>CARTE MÈRE</h2>
-        <img class="imgRightComp" src="IMG/plus.svg" alt=""
-          onclick="document.getElementById('carteMere').style.display = 'flex'" />
+        <div id="imgRightComp" onclick="onClickChangeVisibility('carteMere')"></div>
       </div>
       <div class="composantChoisi" id="carteMere">
 
@@ -76,7 +73,7 @@
             <h3>Prix</h3>
           </div>
         </div>
-        <div class="space"><input type="hidden" name="inputCM" value="1"></div>
+        <div class="space"><input type="hidden" name="inputCM" value=""></div>
 
 
       </div>
@@ -84,8 +81,7 @@
       <div class="composants">
         <img src="IMG/ram.svg" alt="" />
         <h2>MÉMOIRE VIVE</h2>
-        <img class="imgRightComp" src="IMG/plus.svg" alt=""
-          onclick="document.getElementById('memoireVive').style.display = 'flex'" />
+        <div id="imgRightComp" onclick="onClickChangeVisibility('memoireVive')"></div>
       </div>
       <div class="composantChoisi" id="memoireVive">
 
@@ -98,7 +94,7 @@
             <h3>Prix</h3>
           </div>
         </div>
-        <div class="space"><input type="hidden" name="inputMV" value="1"></div>
+        <div class="space"><input type="hidden" name="inputMV" value=""></div>
 
 
       </div>
@@ -106,8 +102,7 @@
       <div class="composants">
         <img src="IMG/carteGraphique.svg" alt="" />
         <h2>CARTE GRAPHIQUE</h2>
-        <img class="imgRightComp" src="IMG/plus.svg" alt=""
-          onclick="document.getElementById('carteGraphique').style.display = 'flex'" />
+        <div id="imgRightComp" onclick="onClickChangeVisibility('carteGraphique')"></div>
       </div>
       <div class="composantChoisi" id="carteGraphique">
 
@@ -120,7 +115,7 @@
             <h3>Prix</h3>
           </div>
         </div>
-        <div class="space"><input type="hidden" name="inputCG" value="1"></div>
+        <div class="space"><input type="hidden" name="inputCG"></div>
 
 
       </div>
@@ -128,8 +123,7 @@
       <div class="composants">
         <img src="IMG/disqueDur.svg" alt="" />
         <h2>DISQUE DUR</h2>
-        <img class="imgRightComp" src="IMG/plus.svg" alt=""
-          onclick="document.getElementById('disqueDur').style.display = 'flex'" />
+        <div id="imgRightComp" onclick="onClickChangeVisibility('disqueDur')"></div>
       </div>
       <div class="composantChoisi" id="disqueDur">
 
@@ -141,15 +135,14 @@
             <h3>Prix</h3>
           </div>
         </div>
-        <div class="space"><input type="hidden" name="inputDD" value="1"></div>
+        <div class="space"><input type="hidden" name="inputDD"></div>
 
       </div>
 
       <div class="composants">
         <img src="IMG/boitier.svg" alt="" />
         <h2>BOÎTIER</h2>
-        <img class="imgRightComp" src="IMG/plus.svg" alt=""
-          onclick="document.getElementById('boitier').style.display = 'flex'" />
+        <div id="imgRightComp" onclick="onClickChangeVisibility('boitier')"></div>
       </div>
       <div class="composantChoisi" id="boitier">
 
@@ -162,7 +155,7 @@
             <h3>Prix</h3>
           </div>
         </div>
-        <div class="space"><input type="hidden" name="inputBoitier" value="1"></div>
+        <div class="space"><input type="hidden" name="inputBoitier"></div>
 
 
       </div>
@@ -177,11 +170,12 @@
       <div class="recapContainer">
         <!--!comp recap****************************************-->
 
-        <div class="recapContainerMain">
-          <div id="composantRecap"></div>
+        <div class="recapContainerMain" id="contRecap">
+          
         </div>
         <div class="recapContainerBtn">
-          <button onclick="(enregistrerConfiguration())" class="btnRecap">Enregistrer</button>
+          <button class="btnRecap">Ajouter en panier</button>
+          
         </div>
       </div>
     </div>
@@ -193,7 +187,7 @@
       <h1>Configuration sauve</h1>
     </div>
     <div class="configAffichage">
-
+aaaaaaaaaaaaaaaaaaaa
     </div>
   </footer>
 </body>
