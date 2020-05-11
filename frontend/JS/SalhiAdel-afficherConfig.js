@@ -14,9 +14,9 @@ function recuPseudo(){
 }
 
 function recupConfig(){
-    let pseu = document.getElementById("pseudo");
+    let pseu = document.getElementById("pseudo").value;
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'recup_config?pseu=' + "wakez", true);
+    xhr.open('GET', 'recup_config?pseu=' + pseu, true);
     xhr.onload = function testConfig(){
         let reponseConfig = this.response;
         recupComposant(reponseConfig);
