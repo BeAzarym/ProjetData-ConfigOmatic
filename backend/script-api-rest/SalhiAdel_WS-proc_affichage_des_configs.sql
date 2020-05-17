@@ -1,12 +1,4 @@
-/*ALTER PROCEDURE "DBA"."recup_pseudo"()
-/* RESULT( nom_colonne type_colonne, ... ) */
-BEGIN
-	/* Saisissez ici les instructions de la procédure */
-select UserId, pseudo
-from tbUser
-END
-*/
--------------------------------------------------------------------------------------------------------------------------------------------
+
 ALTER PROCEDURE "DBA"."recup_config"(IN nom VARCHAR(20) )
 /* RESULT( nom_colonne type_colonne, ... ) */
 RESULT(ConfigId INTEGER)
