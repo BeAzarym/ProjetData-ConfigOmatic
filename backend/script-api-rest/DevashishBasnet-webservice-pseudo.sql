@@ -1,15 +1,3 @@
-ALTER PROCEDURE "DBA"."enregistrer_config"( UserId int , Processeur int , Boitier INT, Ram int , CarteGraphique int , CarteMere int, DisqueDur int )
- 
-BEGIN
-    
-   insert into DBA.tbConfig
-    (ProcesseurId , BoitierId , RamId  , CarteGraphiqueId  , CarteMereId , DisqueDurId)
-    values
-    (Processeur , Boitier , Ram  , CarteGraphique , CarteMere, DisqueDur)     
-
-END
-
-
 
 ALTER PROCEDURE "DBA"."SaveName"( @usr varchar(30) )
 
