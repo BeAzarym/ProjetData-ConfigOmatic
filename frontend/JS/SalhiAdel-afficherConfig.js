@@ -1,4 +1,5 @@
-function recuPseudo(){
+//1er fonction créer afin de recuperer le pseudo, mais inutile au final
+/*function recuPseudo(){
     let pseudo = document.getElementById("pseudo").value;
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'recup_pseudo', true);
@@ -12,7 +13,8 @@ function recuPseudo(){
     }
     xhr.send();
 }
-
+*/
+//fonction permettant de recuperer la config en fonction du pseudo présent sur la page
 function recupConfig(){
     let pseu = document.getElementById("pseudo").value;
     let xhr = new XMLHttpRequest();
@@ -25,6 +27,7 @@ function recupConfig(){
 
 }
 
+//fonction permettant de récuperer les composant lié à l'id de la config
 function recupComposant(reponseConfig){
     let config = reponseConfig;
     let xhr = new XMLHttpRequest();
@@ -33,6 +36,8 @@ function recupComposant(reponseConfig){
 
     xhr.send();
 }
+
+//affichage de la config sur la page
 function testComposant(){
     let reponseComposant = JSON.parse(this.response);
     let tableComposant = '<table>';
@@ -47,3 +52,4 @@ function testComposant(){
     }
     document.getElementById("configAffichage").innerHTML += tableComposant;
 }
+
