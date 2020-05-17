@@ -14,7 +14,7 @@ ALTER PROCEDURE "DBA"."recup_composant"(IN config INTEGER)
 BEGIN
 	/* Saisissez ici les instructions de la procédure */
 select DBA.tbBoitier.BoitierName, DBA.tbCarteGraphique.CarteGraphiqueName,  DBA.tbCarteMere.CarteMereName, DBA.tbDisqueDur.DisqueDurName, DBA.tbProcesseur.ProcesseurName, DBA.tbRAM.RamName
-FROM tbConfig NATURAL JOIN tbBoitier, tbConfig NATURAL JOIN tbCarteGraphique, tbConfig NATURAL JOIN tbCarteMere, tbConfig NATURAL JOIN tbDisqueDur, tbConfig NATURAL JOIN tbProcesseur, tbConfig NATURAL JOIN tbRAM                                                    
+FROM tbConfig JOIN tbBoitier, tbConfig JOIN tbCarteGraphique, tbConfig JOIN tbCarteMere, tbConfig JOIN tbDisqueDur, tbConfig JOIN tbProcesseur, tbConfig JOIN tbRAM                                                    
 WHERE ConfigId = config
 END
 -------------------------------------------------------------------------------------------------------------------------------------------
