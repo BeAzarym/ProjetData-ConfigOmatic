@@ -9,6 +9,7 @@ function chargement(){
     appelCG();
     appelDD();
     appelBoitier();
+    recupConfig();
 }
 
 
@@ -51,7 +52,7 @@ function verifePseudo(){
     console.log(reponse)
     if( reponse == 1 ){
         alert("Ce pseudo existe deja , vous etes bien  : " + pseudo + " Si non trouvé un autre pseudo")
-
+        recupConfig();
     }
 
     if( reponse == 0 ){
