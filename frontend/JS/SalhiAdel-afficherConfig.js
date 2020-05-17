@@ -39,6 +39,7 @@ function recupComposant(reponseConfig){
 
 //affichage de la config sur la page
 function afficherComposant(){
+    document.getElementById("configAffichage").innerHTML = '';
     let reponseComposant = JSON.parse(this.response);
     let tableComposant = '<table>';
     for (let composant of reponseComposant){
