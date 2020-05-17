@@ -27,13 +27,26 @@ function recupConfig(){
 
 }
 
+//fonction permettant de recuperer la config en fonction du pseudo présent sur la page
+function recupConfig(){
+    let nom = document.getElementById("pseudo").value;
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'recup_config?nom=' + nom, true);
+    xhr.onload = function testConfig(){
+        let reponseConfig = JSON.parse(this.response);
+        console.log(reponseConfig);
+        recupComposant(reponseConfig);
+    }
+    xhr.send();
+
+}
+
 //fonction permettant de récuperer les composant lié à l'id de la config
 function recupComposant(reponseConfig){
-    let config = reponseConfig;
+    let config = reponseConfig[0].ConfigId;
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'recup_composant?config=' + config, true);
     xhr.onload = afficherComposant;
-
     xhr.send();
 }
 
@@ -53,4 +66,3 @@ function afficherComposant(){
     }
     document.getElementById("configAffichage").innerHTML += tableComposant;
 }
-
