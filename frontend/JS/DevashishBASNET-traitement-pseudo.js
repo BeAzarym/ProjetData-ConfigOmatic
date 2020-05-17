@@ -15,7 +15,6 @@ function enregistrePseudo(formulaire) {
 
 
 //verification du pseudo dand la db
-//call web service check_pseudo @usr qui est le pseudo que l utilisateur entre 
 function traiterPseudo(){
 
     let pseudo =  document.getElementById("pseudo").value
@@ -35,21 +34,23 @@ function traiterPseudo(){
 function verifePseudo(){
 
     let pseudo =  document.getElementById("pseudo").value
+    let reponse = JSON.parse(this.response);
 
-    let reponse = this.response;
 
-   // console.log(reponse)
-    if( reponse == 1 ){
+    if( reponse[0].nbr == 1 ){
         alert("Ce pseudo existe deja , vous etes bien  : " + pseudo + " Si non trouvé un autre pseudo")
 
     }
 
-    if( reponse == 0 ){
-        enregistrePseudo();
+    else if( reponse[0].nbr == 0 ){
+        ;
+
         alert("vous avez bien été enregistré vous pouvez descendre sur la page");
+        enregistrePseudo();
     }
     return false;
 }
+
 
 
 
