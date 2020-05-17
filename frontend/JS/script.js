@@ -370,9 +370,10 @@ function displayIdCompBoitier(z) {
 function recupConfig(){
     let nom = document.getElementById("pseudo").value;
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'recup_config?pseu=' + nom, true);
+    xhr.open('GET', 'recup_config?nom=' + nom, true);
     xhr.onload = function testConfig(){
-        let reponseConfig = this.response;
+        let reponseConfig = JSON.parse(this.response);
+        console.log(reponseConfig);
         recupComposant(reponseConfig);
     }
     xhr.send();
@@ -381,11 +382,10 @@ function recupConfig(){
 
 //fonction permettant de récuperer les composant lié à l'id de la config
 function recupComposant(reponseConfig){
-    let config = reponseConfig;
+    let config = reponseConfig[0].ConfigId;
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'recup_composant?config=' + config, true);
     xhr.onload = afficherComposant;
-
     xhr.send();
 }
 
