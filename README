@@ -15,3 +15,24 @@ Le site permettra de rentrer un 'pseudo de config' afin d'attribuer un nom à vo
 il sera possible de composé sa config via une liste déroulante pour chaque composants qui seront affichés dans un récapitulatif associé à 
 un bouton qui permettra de sauvegarder sa config dans la base de données. 
 Une config est donc récuperable via son pseudo, et sera affiché en bas de page.
+
+
+LISTE ET DESCRIPTIONS DES WEBSERVICES SQL :
+
+-recup_config          paramètre : nom          type : JSON  | --> Appel la procédure qui récupère les configId en fonction d'un nom entré en paramètre.
+-recup_composant       paramètre : config       type : JSON  | --> Appel la procédure qui récupère les libellé des différents composé en fonction du configId entré en paramètre.
+-ram                   paramètre : /            type : JSON  | -->    
+-processeurs           paramètre : /            type : JSON  | -->
+-page                  paramètre: url           type : JSON  | -->
+-js                    paramètre : url          type : RAW   | -->
+-img                   paramètre : url          type : RAW   | --> 
+-enregistrer_nom       paramètre : usr          type : RAW   | -->
+-enregistrer_config    paramètres : pseudo, Processeur, Boitier, Ram, CarteGraphique, CarteMere, DisqueDur  type : RAW  -->
+-disqueDur             paramètre : /            type : JSON  | -->
+-css                   paramètre : url          type : RAW   | -->
+-check_pseudo          paramètre : usr          type : RAW   | -->
+-carteMere             paramètre : /            type : JSON  | -->
+-CarteGraphique        paramètre : /            type : JSON  | -->
+-boitier               paramètre : /            type : JSON  | -->
+
+
