@@ -35,4 +35,14 @@ LISTE ET DESCRIPTIONS DES WEBSERVICES SQL :
 -CarteGraphique        paramètre : /            type : JSON  | -->
 -boitier               paramètre : /            type : JSON  | -->
 
+LISTE ET DESCRITPIONS TABLES SQL :
+-tbBoitier           --> repertorie une liste de differents boitiers, elle contient leurs Id, leurs noms , ainsi que leurs prix et des details sur le produit.
+-tbCarteGraphique    --> repertorie une liste des différentes cartes graphiques, elle contient leurs Id, leurs noms, leurs prix et des informations complémentaires.
+-tbCarteMere         --> repertorie une liste des cartes mères, elle contient leurs Id, leurs noms, leurs prix et des informations complémentaires.
+-tbConfig            --> repertorie une liste des configs enregistrées, elle contient les id des configs ainsi que tous les id des composants lié aux configs.
+-tbDisqueDur         --> repertorie une liste des disques durs, elle contient leurs Id, leurs noms, leurs prix et des informations complémentaires.
+-tbPprocesseur       --> repertorie une liste processeurs, elle contient leurs Id, leurs noms, leurs prix et des informations complémentaires.
+-tbRam               --> repertorie une liste des barettes de mémoire vive, elle contient leurs Id, leurs noms, leurs prix et des informations complémentaires.
+-tbUser              --> repertorie une liste des utilisateurs, elle contient leurs id, leurs pseudo et l'id de la config qui leurs est attribué.
+
 
