@@ -23,12 +23,12 @@ BEGIN
 END;
 
 CREATE PROCEDURE "DBA"."proc_CM"()
-    result(CarteMereName VARCHAR(20), CarteMerePrix Dprix )
+    result(CarteMereId , CarteMereName VARCHAR(20), CarteMerePrix Dprix )
 BEGIN
     call sa_set_http_header('Content-Type', 'text/html');
     call sa_set_http_header('Access-Control-Allow-Origin', '*');
 
-    SELECT DBA.tbCarteMere.CarteMereName , DBA.tbCarteMere.CarteMerePrix
+    SELECT DBA.tbCarteMere.CarteMereId ,DBA.tbCarteMere.CarteMereName , DBA.tbCarteMere.CarteMerePrix
     FROM tbCarteMere
     
 
