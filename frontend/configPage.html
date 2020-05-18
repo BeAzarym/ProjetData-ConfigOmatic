@@ -6,195 +6,195 @@
 </head>
 
 <body onload="chargement()">
-  <!--************************************************************************************************HEADER-->
-  <header>
-    <script src="JS/scriptAcceuil.js"></script>
-    <aside><img src="IMG/imgBackgroundPC.svg" alt="" /></aside>
+<!--************************************************************************************************HEADER-->
+<header>
+  <script src="JS/scriptAcceuil.js"></script>
+  <aside><img src="IMG/imgBackgroundPC.svg" alt="" /></aside>
 
-    <!--************************************************************LOGIN-->
-    <div id="loginPage">
-      <form name="formulaire" id="form" onsubmit="return traiterPseudo(this)">
-        <p>Login</p>
-        <div class="inputContainer">
-          <label><img src="IMG/login.svg" alt="" /></label>
-          <input id="pseudo" type="text" placeholder="pseudo" name="pseudo" value="" required />
+  <!--************************************************************LOGIN-->
+  <div id="loginPage">
+    <form name="formulaire" id="form" onsubmit="return traiterPseudo(this)">
+      <p>Login</p>
+      <div class="inputContainer">
+        <label><img src="IMG/login.svg" alt="" /></label>
+        <input id="pseudo" type="text" placeholder="pseudo" name="pseudo" value="" required />
 
-          <button id="btn" class="btn" type="submit"> Enregistre </button>
+        <button id="btn" class="btn" type="submit"> Enregistre </button>
 
 
-        </div><br>
+      </div><br>
 
-      </form>
-    </div>
-  </header>
-  <!--**************************************************************************************************MAIN-->
-  <main>
-      <div class="intMainLeftContainer">
-        <div class="title">
-          <h2>COMPOSANTS :</h2>
-        </div>
-
-        <div class="composants">
-          <img src="IMG/processeur.svg" />
-          <h2>PROCESSEUR</h2>
-          <div
-            id="imgRightComp"
-            onclick="onClickChangeVisibility('processeur')"
-          >
-            <img src="IMG/plus.svg" alt="" />
-          </div>
-        </div>
-
-        <div class="composantChoisi" id="processeur">
-          <div class="composantChoisiTitle">
-            <div class="prodDescription">
-              <h3>Description</h3>
-            </div>
-            <div class="prodPrix">
-              <h3>Prix</h3>
-            </div>
-          </div>
-          <div class="space">
-            <input type="hidden" name="inputProcesseur" value="" />
-          </div>
-        </div>
-
-        <div class="composants">
-          <img src="IMG/carteMere.svg" alt="" />
-          <h2>CARTE MÈRE</h2>
-          <div id="imgRightComp" onclick="onClickChangeVisibility('carteMere')">
-            <img src="IMG/plus.svg" alt="" />
-          </div>
-        </div>
-        <div class="composantChoisi" id="carteMere">
-          <div class="composantChoisiTitle">
-            <div class="prodDescription">
-              <h3>Description</h3>
-            </div>
-            <div class="prodPrix">
-              <h3>Prix</h3>
-            </div>
-          </div>
-          <div class="space">
-            <input type="hidden" name="inputCM" value="" />
-          </div>
-        </div>
-
-        <div class="composants">
-          <img src="IMG/ram.svg" alt="" />
-          <h2>MÉMOIRE VIVE</h2>
-          <div
-            id="imgRightComp"
-            onclick="onClickChangeVisibility('memoireVive')"
-          >
-            <img src="IMG/plus.svg" alt="" />
-          </div>
-        </div>
-        <div class="composantChoisi" id="memoireVive">
-          <div class="composantChoisiTitle">
-            <div class="prodDescription">
-              <h3>Description</h3>
-            </div>
-            <div class="prodPrix">
-              <h3>Prix</h3>
-            </div>
-          </div>
-          <div class="space">
-            <input type="hidden" name="inputMV" value="" />
-          </div>
-        </div>
-
-        <div class="composants">
-          <img src="IMG/carteGraphique.svg" alt="" />
-          <h2>CARTE GRAPHIQUE</h2>
-          <div
-            id="imgRightComp"
-            onclick="onClickChangeVisibility('carteGraphique')"
-          >
-            <img src="IMG/plus.svg" alt="" />
-          </div>
-        </div>
-        <div class="composantChoisi" id="carteGraphique">
-          <div class="composantChoisiTitle">
-            <div class="prodDescription">
-              <h3>Description</h3>
-            </div>
-            <div class="prodPrix">
-              <h3>Prix</h3>
-            </div>
-          </div>
-          <div class="space"><input type="hidden" name="inputCG" /></div>
-        </div>
-
-        <div class="composants">
-          <img src="IMG/disqueDur.svg" alt="" />
-          <h2>DISQUE DUR</h2>
-          <div id="imgRightComp" onclick="onClickChangeVisibility('disqueDur')">
-            <img src="IMG/plus.svg" alt="" />
-          </div>
-        </div>
-        <div class="composantChoisi" id="disqueDur">
-          <div class="composantChoisiTitle">
-            <div class="prodDescription">
-              <h3>Description</h3>
-            </div>
-            <div class="prodPrix">
-              <h3>Prix</h3>
-            </div>
-          </div>
-          <div class="space"><input type="hidden" name="inputDD" /></div>
-        </div>
-
-        <div class="composants">
-          <img src="IMG/boitier.svg" alt="" />
-          <h2>BOÎTIER</h2>
-          <div id="imgRightComp" onclick="onClickChangeVisibility('boitier')">
-            <img src="IMG/plus.svg" alt="" />
-          </div>
-        </div>
-        <div class="composantChoisi" id="boitier">
-          <div class="composantChoisiTitle">
-            <div class="prodDescription">
-              <h3>Description</h3>
-            </div>
-            <div class="prodPrix">
-              <h3>Prix</h3>
-            </div>
-          </div>
-          <div class="space"><input type="hidden" name="inputBoitier" /></div>
-        </div>
-      </div>
-
-      <div class="intMainRightContainer">
-        <!--!!Right container************************************-->
-
-        <div class="title">
-          <h2>RÉCAPITULATIF</h2>
-        </div>
-        <div class="recapContainer">
-          <!--!comp recap****************************************-->
-
-          <div class="recapContainerMain" id="contRecap"></div>
-          <div class="recapContainerBtn">
-            <button class="btnRecap">Ajouter en panier</button>
-          </div>
-        </div>
-
-        <a href="http://localhost:90/page?url=addPage" id="addCompPage">
-          <p>Ajouter un composant</p>
-        </a>
-      </div>
-    </main>
-  <!--**************************************************************************************************FOOTER-->
-
-  <footer>
+    </form>
+  </div>
+</header>
+<!--**************************************************************************************************MAIN-->
+<main>
+  <div class="intMainLeftContainer">
     <div class="title">
-      <h1>Configuration sauve</h1>
+      <h2>COMPOSANTS :</h2>
     </div>
-    <div id="configAffichage" class="configAffichage">
-      
+
+    <div class="composants">
+      <img src="IMG/processeur.svg" />
+      <h2>PROCESSEUR</h2>
+      <div
+              id="imgRightComp"
+              onclick="onClickChangeVisibility('processeur')"
+      >
+        <img src="IMG/plus.svg" alt="" />
+      </div>
     </div>
-  </footer>
+
+    <div class="composantChoisi" id="processeur">
+      <div class="composantChoisiTitle">
+        <div class="prodDescription">
+          <h3>Description</h3>
+        </div>
+        <div class="prodPrix">
+          <h3>Prix</h3>
+        </div>
+      </div>
+      <div class="space">
+        <input type="hidden" name="inputProcesseur" value="" />
+      </div>
+    </div>
+
+    <div class="composants">
+      <img src="IMG/carteMere.svg" alt="" />
+      <h2>CARTE MÈRE</h2>
+      <div id="imgRightComp" onclick="onClickChangeVisibility('carteMere')">
+        <img src="IMG/plus.svg" alt="" />
+      </div>
+    </div>
+    <div class="composantChoisi" id="carteMere">
+      <div class="composantChoisiTitle">
+        <div class="prodDescription">
+          <h3>Description</h3>
+        </div>
+        <div class="prodPrix">
+          <h3>Prix</h3>
+        </div>
+      </div>
+      <div class="space">
+        <input id="inputCM" type="hidden" name="inputCM" value="1" />
+      </div>
+    </div>
+
+    <div class="composants">
+      <img src="IMG/ram.svg" alt="" />
+      <h2>MÉMOIRE VIVE</h2>
+      <div
+              id="imgRightComp"
+              onclick="onClickChangeVisibility('memoireVive')"
+      >
+        <img src="IMG/plus.svg" alt="" />
+      </div>
+    </div>
+    <div class="composantChoisi" id="memoireVive">
+      <div class="composantChoisiTitle">
+        <div class="prodDescription">
+          <h3>Description</h3>
+        </div>
+        <div class="prodPrix">
+          <h3>Prix</h3>
+        </div>
+      </div>
+      <div class="space">
+        <input type="hidden" name="inputMV" value="" />
+      </div>
+    </div>
+
+    <div class="composants">
+      <img src="IMG/carteGraphique.svg" alt="" />
+      <h2>CARTE GRAPHIQUE</h2>
+      <div
+              id="imgRightComp"
+              onclick="onClickChangeVisibility('carteGraphique')"
+      >
+        <img src="IMG/plus.svg" alt="" />
+      </div>
+    </div>
+    <div class="composantChoisi" id="carteGraphique">
+      <div class="composantChoisiTitle">
+        <div class="prodDescription">
+          <h3>Description</h3>
+        </div>
+        <div class="prodPrix">
+          <h3>Prix</h3>
+        </div>
+      </div>
+      <div class="space"><input type="hidden" name="inputCG" /></div>
+    </div>
+
+    <div class="composants">
+      <img src="IMG/disqueDur.svg" alt="" />
+      <h2>DISQUE DUR</h2>
+      <div id="imgRightComp" onclick="onClickChangeVisibility('disqueDur')">
+        <img src="IMG/plus.svg" alt="" />
+      </div>
+    </div>
+    <div class="composantChoisi" id="disqueDur">
+      <div class="composantChoisiTitle">
+        <div class="prodDescription">
+          <h3>Description</h3>
+        </div>
+        <div class="prodPrix">
+          <h3>Prix</h3>
+        </div>
+      </div>
+      <div class="space"><input type="hidden" name="inputDD" /></div>
+    </div>
+
+    <div class="composants">
+      <img src="IMG/boitier.svg" alt="" />
+      <h2>BOÎTIER</h2>
+      <div id="imgRightComp" onclick="onClickChangeVisibility('boitier')">
+        <img src="IMG/plus.svg" alt="" />
+      </div>
+    </div>
+    <div class="composantChoisi" id="boitier">
+      <div class="composantChoisiTitle">
+        <div class="prodDescription">
+          <h3>Description</h3>
+        </div>
+        <div class="prodPrix">
+          <h3>Prix</h3>
+        </div>
+      </div>
+      <div class="space"><input type="hidden" name="inputBoitier" /></div>
+    </div>
+  </div>
+
+  <div class="intMainRightContainer">
+    <!--!!Right container************************************-->
+
+    <div class="title">
+      <h2>RÉCAPITULATIF</h2>
+    </div>
+    <div class="recapContainer">
+      <!--!comp recap****************************************-->
+
+      <div class="recapContainerMain" id="contRecap"></div>
+      <div class="recapContainerBtn">
+        <button class="btnRecap">Ajouter en panier</button>
+      </div>
+    </div>
+
+    <a href="http://localhost:90/page?url=addPage" id="addCompPage">
+      <p>Ajouter un composant</p>
+    </a>
+  </div>
+</main>
+<!--**************************************************************************************************FOOTER-->
+
+<footer>
+  <div class="title">
+    <h1>Configuration sauve</h1>
+  </div>
+  <div id="configAffichage" class="configAffichage">
+
+  </div>
+</footer>
 </body>
 
 </html>
