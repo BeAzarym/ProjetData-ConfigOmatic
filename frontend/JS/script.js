@@ -1,4 +1,4 @@
-"use strict"; 
+"use strict";
 
 //body onload chargement
 // récup des données des composants et les affiches ds la page
@@ -93,7 +93,7 @@ function chargementProc() {
 
     let procId = "";
     for (let i of reponse) {
-        
+
 
         procId += '<div class="containerProduits" onclick="displayIdCompProc(' + i.ProcesseurId +')">' +  /* onClock ne functione pas */
             '<div class="intContainerProduits">' +
@@ -126,7 +126,7 @@ function displayIdCompProc(x) {
 
 function addInRecap() {
     let inputWith = '<div id="composantRecap">'+arguments[1] + " " + arguments[0] +'</div>';
-    
+
     document.getElementById("contRecap").insertAdjacentHTML('beforeend', inputWith);
 }
 /***************************************************************************************************************appel carte mere */
@@ -146,7 +146,7 @@ function chargementCM() {
 
     let cmId = "";
     for (let i of reponse) {
-        
+
 
         cmId += '<div class="containerProduits" onclick="displayIdCompCM(' + i.CarteMereId +')">' +
             '<div class="intContainerProduits">' +
@@ -240,9 +240,9 @@ function chargementCG() {
 
     let cgId = "";
     for (let i of reponse) {
-        
 
-        cgId += '<div class="containerProduits" " onclick="displayIdCompCG(' + i.CarteGraphiqueId +')">' +  
+
+        cgId += '<div class="containerProduits" " onclick="displayIdCompCG(' + i.CarteGraphiqueId +')">' +
             '<div class="intContainerProduits">' +
             '<div class="nomDescriptionProd">' +
             '<div class="monProd">' +
@@ -287,9 +287,9 @@ function chargementDD() {
 
     let ddId = "";
     for (let i of reponse) {
-        
 
-        ddId += '<div class="containerProduits" onclick="displayIdCompDD(' + i.DisqueDurId +')">' +  
+
+        ddId += '<div class="containerProduits" onclick="displayIdCompDD(' + i.DisqueDurId +')">' +
             '<div class="intContainerProduits">' +
             '<div class="nomDescriptionProd">' +
             '<div class="monProd">' +
@@ -337,9 +337,9 @@ function chargementBoitier() {
 
     let boitierId = "";
     for (let i of reponse){
-        
 
-        boitierId += '<div class="containerProduits" onclick="displayIdCompBoitier(' + i.BoitierId +')">' +  
+
+        boitierId += '<div class="containerProduits" onclick="displayIdCompBoitier(' + i.BoitierId +')">' +
             '<div class="intContainerProduits">' +
             '<div class="nomDescriptionProd">' +
             '<div class="monProd">' +
@@ -350,11 +350,11 @@ function chargementBoitier() {
             '</div>' +
             '</div>' +
             '<img src="" alt="" /TODO add ploto name drom database OPTIONAL*/>' +
-        '</div>' +
-        '<div class="intContainerPrix">' +
-        '<p>' + i.BoitierPrix + '</p>' +
-        '</div>' +
-        '</div>';
+            '</div>' +
+            '<div class="intContainerPrix">' +
+            '<p>' + i.BoitierPrix + '</p>' +
+            '</div>' +
+            '</div>';
     };
     document.getElementById("boitier").insertAdjacentHTML('beforeend', boitierId);
 }
@@ -405,3 +405,21 @@ function afficherComposant(){
     }
     document.getElementById("configAffichage").innerHTML += tableComposant;
 }
+
+function enregistrerConfiguration () {
+    let pseudoEnregDonne = document.getElementById("pseudo").value;
+    let processeur = document.getElementsByName("inputProcesseur")[0].value;
+    let boitier = document.getElementsByName("inputBoitier")[0].value;
+    let ram = document.getElementsByName("inputMV")[0].value;
+    let carteGraphique = document.getElementsByName("inputCG")[0].value;
+    let carteMere = document.getElementsByName("inputCM")[0].value;
+    let disqueDur = document.getElementsByName("inputDD")[0].value;
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET','enregistre_config?Processeur='+processeur+"&Boitier="+boitier+"&Ram="+ram+"&CarteGraphique="+carteGraphique+"&CarteMere="+carteMere+"&DisqueDur="+disqueDur+"&pseudo="+pseudoEnregDonne,true);
+    xhr.send();
+    alert("Votre configuration a été sauvegardé !");
+    return false;
+
+}
+
