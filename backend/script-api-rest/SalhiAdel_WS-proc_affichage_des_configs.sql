@@ -5,8 +5,8 @@ RESULT(ConfigId INTEGER)
 BEGIN
 	/* Saisissez ici les instructions de la procédure */
 select tbUser.ConfigId
-FROM tbUser join tbConfig
-where pseudo = nom
+FROM tbUser 
+where pseudoUser = nom
 END
 -------------------------------------------------------------------------------------------------------------------------------------------
 ALTER PROCEDURE "DBA"."recup_composant"(IN config INTEGER)
