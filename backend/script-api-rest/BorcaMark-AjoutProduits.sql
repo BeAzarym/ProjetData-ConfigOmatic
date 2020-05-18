@@ -8,7 +8,7 @@ BEGIN
         (@procName, @procPrix, @socket)
 END
 
-CREATE SERVICE "ajouter_processeur" TYPE 'RAW' USER "DBA" METHODS 'GET' AS call ajouter_processeur
+CREATE SERVICE "ajouter_processeur" TYPE 'JSON' USER "DBA" METHODS 'GET' AS call ajouter_processeur
 (:procName,:procPrix,:socket);
 
 
@@ -22,7 +22,7 @@ BEGIN
         (@CMName, @CMPrix, @CMsocket)
 END
 
-CREATE SERVICE "ajouter_CM" TYPE 'RAW' USER "DBA" METHODS 'GET' AS call ajouter_CM
+CREATE SERVICE "ajouter_CM" TYPE 'JSON' USER "DBA" METHODS 'GET' AS call ajouter_CM
 (:CMName,:CMPrix,:CMsocket);
 
 
@@ -36,7 +36,7 @@ BEGIN
         (@MVName, @MVPrix, @MVcapacite)
 END
 
-CREATE SERVICE "ajouter_MV" TYPE 'RAW' USER "DBA" METHODS 'GET' AS call ajouter_MV
+CREATE SERVICE "ajouter_MV" TYPE 'JSON' USER "DBA" METHODS 'GET' AS call ajouter_MV
 (:MVName,:MVPrix,:MVcapacite);
 
 
@@ -50,7 +50,7 @@ BEGIN
         (@CGName, @CGPrix, @CGMemoire)
 END
 
-CREATE SERVICE "ajouter_CG" TYPE 'RAW' USER "DBA" METHODS 'GET' AS call ajouter_CG
+CREATE SERVICE "ajouter_CG" TYPE 'JSON' USER "DBA" METHODS 'GET' AS call ajouter_CG
 (:CGName,:CGPrix,:CGMemoire);
 
 
@@ -63,7 +63,7 @@ BEGIN
     VALUES
         (@DDName, @DDPrix, @DDCapacite)
 END
-CREATE SERVICE "ajouter_DD" TYPE 'RAW' USER "DBA" METHODS 'GET' AS call ajouter_DD
+CREATE SERVICE "ajouter_DD" TYPE 'JSON' USER "DBA" METHODS 'GET' AS call ajouter_DD
 (:DDName,:DDPrix,:DDCapacite);
 
 
@@ -76,5 +76,5 @@ BEGIN
     VALUES
         (@BoitierName, @BoitierPrix, @BoitierLargeur, @BoitierHauteur)
 END
-CREATE SERVICE "ajouter_boitier" TYPE 'RAW' USER "DBA" METHODS 'GET' AS call ajouter_boitier
+CREATE SERVICE "ajouter_boitier" TYPE 'JSON' USER "DBA" METHODS 'GET' AS call ajouter_boitier
 (:BoitierName,:BoitierPrix,:BoitierLargeur,:BoitierHauteur);
