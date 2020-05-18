@@ -124,7 +124,7 @@ function displayIdCompProc(x) {
 }
 
 function addInRecap() {
-    let inputWith = '<div id="composantRecap">'+arguments[1] + " " + arguments[0] +'</div>';
+    let inputWith = "<div id='composantRecap'>"+arguments[1] + " " + arguments[0] +'</div>';
     
     document.getElementById("contRecap").insertAdjacentHTML('beforeend', inputWith);
 }
@@ -134,18 +134,18 @@ function appelCM() {
     let xhr = new XMLHttpRequest();
     xhr.open("get", "carteMere", true);
     xhr.onload = chargementCM;
-    xhr.responseType = "json";
     xhr.send();
     return false;
 }
 
 
 function chargementCM() {
-    let reponse = this.response;
+    let reponse = JSON.parse(this.response);
+    console.log(reponse)
 
     let cmId = "";
     for (let i of reponse) {
-        
+
 
         cmId += '<div class="containerProduits" onclick="displayIdCompCM(' + i.CarteMereId +')">' +
             '<div class="intContainerProduits">' +
@@ -170,11 +170,11 @@ function chargementCM() {
 function displayIdCompCM(y) {
     console.log(y);
     addInRecap(y, "Id du carte mere :");
-    let getInput = document.getElementsByName("inputCM")[0];
+    let getInput = document.getElementById("inputCM")
     getInput.value = "";
     getInput.value = y;
-    console.log(getInput.value);
 }
+
 /********************************************************************************************************************appel memoire vive */
 
 function appelMV() {
