@@ -27,7 +27,7 @@ LISTE ET DESCRIPTIONS DES WEBSERVICES SQL :
 -js                    paramètre : url          type : RAW   | --> appel la procedure getJS qui permet de récuperer le chemin de notre js
 -img                   paramètre : url          type : RAW   | --> appel la procedure getIMG qui permet de récuperer le chemin de notre dossier IMG
 -enregistrer_nom       paramètre : usr          type : JSON   | --> appel la procédure SaveName qui insert usr
--enregistrer_config    paramètres : pseudo, Processeur, Boitier, Ram, CarteGraphique, CarteMere, DisqueDur  type : RAW  -->
+-enregistrer_config    paramètres : pseudo, Processeur, Boitier, Ram, CarteGraphique, CarteMere, DisqueDur  type : RAW  --> Enregistre la configuration de l'utilisateur
 -disqueDur             paramètre : /            type : JSON  | --> Appel la procedure proc_DisqueDur qui renvoie DisqueDurId ,DisqueDurName , DisqueDurPrix ,capacite
 -css                   paramètre : url          type : RAW   | --> appel la procedure getCSS qui permet de récuperer le dossier CSS
 -check_pseudo          paramètre : usr          type : JSON   | --> appel la procedure checkPseudo qui envoie un boléan
