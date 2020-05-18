@@ -12,14 +12,14 @@ footer {
 }
 /**************************************************************************************************************************header*/
 header {
-    background-color: white;
-    width: 1100px;
-    height: 500px;
-    margin: 100px auto;
-    padding: 10px;
-    border-radius: 1.5%;
-    display: flex;
-    flex-direction: row;
+  background-color: white;
+  width: 1100px;
+  height: 500px;
+  margin: 100px auto;
+  padding: 10px;
+  border-radius: 1.5%;
+  display: flex;
+  flex-direction: row;
 }
 aside {
   background-color: rgb(6, 18, 31);
@@ -80,7 +80,7 @@ img {
   box-sizing: border-box;
 }
 .btn {
-  background-color: dodgerblue;
+  background-color: rgb(230, 150, 76);
   color: white;
   padding: 15px 20px;
   border: none;
@@ -94,17 +94,18 @@ img {
   opacity: 1;
 }
 
-
-
 /******************************************************************************************************main*/
-#imgRightComp{
-  background-color: yellow;
+#imgRightComp {
   background-image: url("");
   width: 70px;
   height: 70px;
   margin: 10px;
 }
-
+#imgRightComp img {
+  width: 70px;
+  height: 70px;
+  margin: 0em;
+}
 main {
   background-color: white;
   width: 1100px;
@@ -114,8 +115,6 @@ main {
   display: flex;
   flex-direction: row;
 }
-
-
 
 /** LEFT CONTAINER*/
 .intMainLeftContainer {
@@ -165,7 +164,7 @@ main {
 }
 
 /*********************************title*/
-.composantChoisiTitle{
+.composantChoisiTitle {
   height: 40px;
   width: calc(698px - 2px);
   display: flex;
@@ -173,29 +172,28 @@ main {
   border: 1px black solid;
   position: absolute;
 }
-.prodDescription{
+.prodDescription {
   background-color: rgb(134, 134, 134);
   width: 80%;
   height: 40px;
   border-right: 1px black solid;
 }
-.prodPrix{
+.prodPrix {
   background-color: rgb(134, 134, 134);
   width: 20%;
   height: 40px;
-
 }
-h3{
+h3 {
   margin: 0;
   color: white;
-  line-height:40px;
+  line-height: 40px;
   text-align: center;
 }
 /*********************************title end*/
-.space{
+.space {
   margin-bottom: 40px;
 }
-.containerProduits{
+.containerProduits {
   background-color: lightblue;
   width: calc(100% - 2px);
   height: 150px;
@@ -203,61 +201,57 @@ h3{
   flex-direction: row;
   border: 1px black solid;
   margin-top: 5px;
-}/* onclick ckange this display to none, personal id of chosen product display flex*/
-.intContainerProduits{
-  
+} /* onclick ckange this display to none, personal id of chosen product display flex*/
+.intContainerProduits {
   width: 80%;
   height: 150px;
   border-right: 1px black solid;
   display: flex;
-  flex-direction: row
+  flex-direction: row;
 }
-.nomDescriptionProd{
+.nomDescriptionProd {
   background-color: rgb(236, 236, 236);
   width: 410px;
   display: flex;
   flex-direction: column;
 }
-.monProd{
-  
+.monProd {
   width: 100%;
   height: 40px;
 }
-.monProd p{
-margin-left: 10px;
-}/****************************TODO add text format name product*/
-.descriptionProd{
-  
+.monProd p {
+  margin-left: 10px;
+} /****************************TODO add text format name product*/
+.descriptionProd {
   width: 100%;
   min-height: 40px;
   max-height: 100px;
   margin-top: 5px;
 }
-.descriptionProd p{
+.descriptionProd p {
   margin-left: 50px;
-}/****************************TODO add text format description*/
-.intContainerProduits img{
+} /****************************TODO add text format description*/
+.intContainerProduits img {
   width: 150px;
   height: 150px;
 }
-.intContainerProduits button{
+.intContainerProduits button {
   width: 150px;
   height: 150px;
   background-color: blueviolet;
   border: none;
 }
 
-
-.intContainerPrix{
+.intContainerPrix {
   background-color: rgb(236, 236, 236);
   width: 20%;
   height: 150px;
   line-height: 110px;
   text-align: center;
 }
-.intContainerPrix p{
+.intContainerPrix p {
   color: black;
-}/****************************TODO add text format price*/
+} /****************************TODO add text format price*/
 
 /*!! Right Container*******RECAP**********************************/
 .intMainRightContainer {
@@ -277,7 +271,6 @@ margin-left: 10px;
   flex-direction: column;
 }
 #composantRecap {
-  
   width: 98%;
   height: 20px;
   margin: 1% 1%;
@@ -313,11 +306,24 @@ footer {
   margin: 0 auto;
   padding: 10px;
 }
-.configAffichage{
+.configAffichage {
   background-color: grey;
   color: black;
   font-weight: bold;
   font-size: 20px;
   width: 100%;
   height: 150px;
+}
+
+#addCompPage {
+  background-color: rgb(230, 150, 76);
+  width: 98%;
+  height: 60px;
+  margin: 50px 0 0 5px;
+  color: white;
+  text-decoration: none;
+}
+a p {
+  text-align: center;
+  line-height: 60px;
 }
