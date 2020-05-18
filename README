@@ -21,19 +21,19 @@ LISTE ET DESCRIPTIONS DES WEBSERVICES SQL :
 
 -recup_config          paramètre : nom          type : JSON  | --> Appel la procédure qui récupère les configId en fonction d'un nom entré en paramètre.
 -recup_composant       paramètre : config       type : JSON  | --> Appel la procédure qui récupère les libellé des différents composé en fonction du configId entré en paramètre.
--ram                   paramètre : /            type : JSON  | -->    
--processeurs           paramètre : /            type : JSON  | -->
--page                  paramètre: url           type : JSON  | -->
--js                    paramètre : url          type : RAW   | -->
--img                   paramètre : url          type : RAW   | --> 
--enregistrer_nom       paramètre : usr          type : RAW   | -->
+-ram                   paramètre : /            type : JSON  | --> Appel la procedure proc_ram qui renvoie RamId ,RamName , RamPrix ,capacite
+-processeurs           paramètre : /            type : JSON  | --> Appel la procedure proc_processeurs qui renvoie ProcesseurId ,ProcesseurName , ProcesseurPrix ,socket
+-page                  paramètre: url           type : JSON  | --> appel la procedure getPage qui permet de récuperer le chemin de notre html
+-js                    paramètre : url          type : RAW   | --> appel la procedure getJS qui permet de récuperer le chemin de notre js
+-img                   paramètre : url          type : RAW   | --> appel la procedure getIMG qui permet de récuperer le chemin de notre dossier IMG
+-enregistrer_nom       paramètre : usr          type : JSON   | --> appel la procédure SaveName qui insert usr
 -enregistrer_config    paramètres : pseudo, Processeur, Boitier, Ram, CarteGraphique, CarteMere, DisqueDur  type : RAW  -->
--disqueDur             paramètre : /            type : JSON  | -->
--css                   paramètre : url          type : RAW   | -->
--check_pseudo          paramètre : usr          type : RAW   | -->
--carteMere             paramètre : /            type : JSON  | -->
--CarteGraphique        paramètre : /            type : JSON  | -->
--boitier               paramètre : /            type : JSON  | -->
+-disqueDur             paramètre : /            type : JSON  | --> Appel la procedure proc_DisqueDur qui renvoie DisqueDurId ,DisqueDurName , DisqueDurPrix ,capacite
+-css                   paramètre : url          type : RAW   | --> appel la procedure getCSS qui permet de récuperer le dossier CSS
+-check_pseudo          paramètre : usr          type : JSON   | --> appel la procedure checkPseudo qui envoie un boléan
+-carteMere             paramètre : /            type : JSON  | -->  Appel la procedure proc_CM qui renvoie carteMereId ,carteMereName ,carteMerePrix , socket
+-CarteGraphique        paramètre : /            type : JSON  | --> Appel la procedure proc_CarteGraphique qui renvoie CarteGraphiqueId ,CarteGraphiqueName , CarteGraphiquePrix , memoire
+-boitier               paramètre : /            type : JSON  | --> Appel la procedure proc_boitier qui renvoie boitierId ,boitierName , boitierPrix ,largeur , longueur
 
 LISTE ET DESCRITPIONS TABLES SQL :
 -tbBoitier           --> repertorie une liste de differents boitiers, elle contient leurs Id, leurs noms , ainsi que leurs prix et des details sur le produit.
