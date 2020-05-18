@@ -10,7 +10,7 @@ where pseudoUser = nom
 END
 -------------------------------------------------------------------------------------------------------------------------------------------
 ALTER PROCEDURE "DBA"."recup_composant"(IN config INTEGER)
-/* RESULT( nom_colonne type_colonne, ... ) */
+RESULT(BoitierName LONG VARCHAR , CarteGraphiqueName LONG VARCHAR, CarteMereName LONG VARCHAR, DisqueDurName LONG VARCHAR, ProcesseurName LONG VARCHAR, RamName LONG VARCHAR)
 BEGIN
 	/* Saisissez ici les instructions de la procédure */
 select DBA.tbBoitier.BoitierName, DBA.tbCarteGraphique.CarteGraphiqueName,  DBA.tbCarteMere.CarteMereName, DBA.tbDisqueDur.DisqueDurName, DBA.tbProcesseur.ProcesseurName, DBA.tbRAM.RamName
