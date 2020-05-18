@@ -34,6 +34,12 @@ LISTE ET DESCRIPTIONS DES WEBSERVICES SQL :
 -carteMere             paramètre : /            type : JSON  | -->  Appel la procedure proc_CM qui renvoie carteMereId ,carteMereName ,carteMerePrix , socket
 -CarteGraphique        paramètre : /            type : JSON  | --> Appel la procedure proc_CarteGraphique qui renvoie CarteGraphiqueId ,CarteGraphiqueName , CarteGraphiquePrix , memoire
 -boitier               paramètre : /            type : JSON  | --> Appel la procedure proc_boitier qui renvoie boitierId ,boitierName , boitierPrix ,largeur , longueur
+-ajouter_processeur    paramètre : procName,procPrix,:socket                              type : JSON  | --> Appel la procedure ajouter_processeur qui enregistre le produit introduit
+-ajouter_CG            paramètre : CGName,CGPrix,CGMemoire                                type : JSON  | --> Appel la procedure ajouter_CG qui enregistre le produit introduit
+-ajouter_MV            paramètre : MVName,MVPrix,MVcapacite                               type : JSON  | --> Appel la procedure ajouter_MV qui enregistre le produit introduit
+-ajouter_DD            paramètre : DDName,DDPrix,DDCapacite                               type : JSON  | --> Appel la procedure ajouter_DD qui enregistre le produit introduit
+-ajouter_CM            paramètre : CMName,CMPrix,CMsocket                                 type : JSON  | --> Appel la procedure ajouter_CM qui enregistre le produit introduit
+-ajouter_boitier       paramètre : BoitierName,BoitierPrix,BoitierLargeur,BoitierHauteur  type : JSON  | --> Appel la procedure ajouter_boitier qui enregistre le produit introduit
 
 LISTE ET DESCRITPIONS TABLES SQL :
 -tbBoitier           --> repertorie une liste de differents boitiers, elle contient leurs Id, leurs noms , ainsi que leurs prix et des details sur le produit.
