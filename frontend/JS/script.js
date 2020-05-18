@@ -141,7 +141,7 @@ function appelCM() {
 
 function chargementCM() {
     let reponse = JSON.parse(this.response);
-    console.log(reponse)
+   // console.log(reponse)
 
     let cmId = "";
     for (let i of reponse) {
@@ -371,8 +371,6 @@ function displayIdCompBoitier(z) {
 
 
 
-
-
 function enregistrerConfiguration () {
     let pseudoEnregDonne = document.getElementById("pseudo").value;
     let processeur = document.getElementsByName("inputProcesseur")[0].value;
@@ -385,7 +383,9 @@ function enregistrerConfiguration () {
     let xhr = new XMLHttpRequest();
     xhr.open('GET','enregistre_config?Processeur='+processeur+"&Boitier="+boitier+"&Ram="+ram+"&CarteGraphique="+carteGraphique+"&CarteMere="+carteMere+"&DisqueDur="+disqueDur+"&pseudo="+pseudoEnregDonne,true);
     xhr.send();
+    alert("Votre configuration a été sauvegardé !");
     return false;
+
 }
 
 //fonction permettant de recuperer la config en fonction du pseudo présent sur la page
