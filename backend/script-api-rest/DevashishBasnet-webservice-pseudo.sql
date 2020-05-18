@@ -5,7 +5,7 @@ BEGIN
     call sa_set_http_header('Content-Type', 'text/html');
     call sa_set_http_header('Access-Control-Allow-Origin', '*');	
 
-        insert into dba.tbUser (configName)
+        insert into dba.tbUser (pseudoUser)
         values ( @usr )   
         
 END
@@ -21,7 +21,7 @@ BEGIN
     
     SELECT count(*)
     from tbUser 
-    where configName = usr   
+    where pseudoUser = usr   
     
 END
 
