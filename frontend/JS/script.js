@@ -381,11 +381,9 @@ function enregistrerConfiguration () {
     let disqueDur = document.getElementsByName("inputDD")[0].value;
 
     let xhr = new XMLHttpRequest();
-    xhr.open('GET','enregistre_config?Processeur='+processeur+"&Boitier="+boitier+"&Ram="+ram+"&CarteGraphique="+carteGraphique+"&CarteMere="+carteMere+"&DisqueDur="+disqueDur+"&pseudo="+pseudoEnregDonne,true);
-    xhr.send();
+    xhr.open('GET','enregistre_config?Processeur='+processeur+"&Boitier="+boitier+"&Ram="+ram+"&CarteGraphique="+carteGraphique+"&CarteMere="+carteMere+"&DisqueDur="+disqueDur+"&pseudo="+pseudoEnregDonne,true);    xhr.send();
     alert("Votre configuration a été sauvegardé !");
     return false;
-
 }
 
 //fonction permettant de recuperer la config en fonction du pseudo présent sur la page

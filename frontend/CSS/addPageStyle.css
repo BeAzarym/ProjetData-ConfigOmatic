@@ -1,61 +1,61 @@
 body {
-  background-color: whitesmoke;
+    background-color: whitesmoke;
 }
 main {
-  background-color: whitesmoke;
-  width: 800px;
-  min-height: 500px;
-  margin: 10px auto;
-  display: flex;
-  flex-direction: column;
+    background-color: whitesmoke;
+    width: 800px;
+    min-height: 500px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
 }
 .formStyle {
-  background-color: white;
-  width: 600px;
-  min-height: 100px;
-  padding: 30px;
-  margin: 10px auto;
-  display: flex;
-  flex-direction: column;
-  border: 1px grey solid;
+    background-color: white;
+    width: 600px;
+    min-height: 100px;
+    padding: 30px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px grey solid;
 }
 .titleIntForm {
-  height: 25px;
-  min-width: 50px;
-  margin: 5px auto;
+    height: 25px;
+    min-width: 50px;
+    margin: 5px auto;
 }
 label {
-  font-size: 20px;
+    font-size: 20px;
 }
 input {
-  background-color: white;
-  border: none;
-  border-bottom: black 1px solid;
+    background-color: white;
+    border: none;
+    border-bottom: black 1px solid;
 }
 input[type="text"] {
-  width: 100%;
-  font-size: 20px;
-  padding: 5px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
+    width: 100%;
+    font-size: 20px;
+    padding: 5px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
 }
 
 button {
-  background-color: rgb(230, 150, 76);
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 10px 2px;
-  cursor: pointer;
+    background-color: rgb(230, 150, 76);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 10px 2px;
+    cursor: pointer;
 }
 a {
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  margin: auto;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    margin: auto;
 }
 a img {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
 }
